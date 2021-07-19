@@ -11,12 +11,12 @@
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-      overflow:auto;
 
   }
   
   .title {
-    margin: 20px;font-family: 'Tourney', cursive;
+    margin: 20px;
+    font-family: 'Tourney', cursive;
     color: #252F27;
  font-size: 2.5rem;
   }
@@ -35,6 +35,20 @@
     gap: 4px;
     background-color: #3C4245;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   .board > * {
     width: 100%;
@@ -59,7 +73,7 @@
   
   .board > [data-status="number"] {
     background-color: none;
-    font-size: 30px;
+    font-size: x-large;
   }
 
   
@@ -87,4 +101,39 @@
 
   #rest:active{
     color:#5F6769 ;
+  }
+
+
+
+  
+  @media only screen and (min-width: 283px) and (max-width: 500px)  {
+  
+    .board{
+      grid-template-columns: repeat(var(--size), 26px);
+      grid-template-rows: repeat(var(--size), 26px);
+    }
+    .board > [data-status="mine"] {
+      font-size: large;
+    }
+
+  }
+
+  @media only screen and (max-width:281px){
+    .board{
+      grid-template-columns: repeat(var(--size), 22px);
+      grid-template-rows: repeat(var(--size), 22px);
+    }
+
+    .board > [data-status="mine"] {
+      font-size: small;
+    }
+
+    .title{
+      font-size: 2rem;
+    }
+
+    .board > [data-status="number"] {
+      font-size: larger;
+    }
+    
   }
